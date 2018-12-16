@@ -28,3 +28,8 @@ config :phoenix, :json_library, Jason
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
+
+# Discord bot config
+config :nostrum,
+  token: System.get_env("DISCORD_BOT_TOKEN"),
+  num_shards: :auto

@@ -20,6 +20,6 @@ defmodule MerchCatWeb.Router do
   scope "/api", MerchCatWeb do
     pipe_through :api
 
-    get "/admin/discord/ping", AdminController, :ping
+    get "/admin/discord/ping", AdminController, :discord_ping
   end
 end
