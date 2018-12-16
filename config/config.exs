@@ -13,7 +13,7 @@ config :merch_cat,
 # Configures the endpoint
 config :merch_cat, MerchCatWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: System.get_env("SECRET_KEY_BASE"),
+  secret_key_base: "we-dont-use-this",
   render_errors: [view: MerchCatWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: MerchCat.PubSub, adapter: Phoenix.PubSub.PG2]
 
