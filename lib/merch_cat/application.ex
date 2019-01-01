@@ -17,7 +17,7 @@ defmodule MerchCat.Application do
     ]
 
     # Start discord consumer
-    DiscordSupervisor.start_link
+    Discord.Supervisor.start_link
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options

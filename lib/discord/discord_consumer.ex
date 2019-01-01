@@ -1,6 +1,5 @@
 # from https://github.com/Kraigie/nostrum/blob/master/examples/event_consumer.ex
-
-defmodule DiscordConsumer do
+defmodule Discord.Consumer do
   use Nostrum.Consumer
 
   alias Nostrum.Api
