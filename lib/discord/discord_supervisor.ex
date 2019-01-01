@@ -1,5 +1,5 @@
 # from https://github.com/Kraigie/nostrum/blob/master/examples/event_consumer.ex
-defmodule DiscordSupervisor do
+defmodule Discord.Supervisor do
 
   require Logger
 
@@ -8,7 +8,7 @@ defmodule DiscordSupervisor do
 
     import Supervisor.Spec
 
-    children = [DiscordConsumer]
+    children = [Discord.Consumer]
 
     Supervisor.start_link(children, strategy: :one_for_one)
   end
