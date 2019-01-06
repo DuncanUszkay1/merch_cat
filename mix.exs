@@ -20,7 +20,7 @@ defmodule MerchCat.MixProject do
   def application do
     [
       mod: {MerchCat.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :crypto]
     ]
   end
 
@@ -43,7 +43,9 @@ defmodule MerchCat.MixProject do
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:nostrum, git: "https://github.com/Kraigie/nostrum.git"}
+      {:nostrum, git: "https://github.com/Kraigie/nostrum.git"},
+      {:shopify, "~> 0.2.0"},
+      {:httpoison, "~> 1.0", override: true}
     ]
   end
 

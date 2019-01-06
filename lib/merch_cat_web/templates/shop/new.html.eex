@@ -1,0 +1,3 @@
+<h1>New Shop</h1>
+
+<%= render "signup_form.html", Map.put(assigns, :action, Routes.shop_path(@conn, :signup)) %>

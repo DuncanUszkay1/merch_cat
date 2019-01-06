@@ -1,0 +1,28 @@
+<h1>Listing Shops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Shopify domain</th>
+      <th>Shopify token</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for shop <- @shops do %>
+    <tr>
+      <td><%= shop.shopify_domain %></td>
+      <td><%= shop.shopify_token %></td>
+
+      <td>
+        <%= link "Show", to: Routes.shop_path(@conn, :show, shop) %>
+        <%= link "Edit", to: Routes.shop_path(@conn, :edit, shop) %>
+        <%= link "Delete", to: Routes.shop_path(@conn, :delete, shop), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Shop", to: Routes.shop_path(@conn, :new) %></span>

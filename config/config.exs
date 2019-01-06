@@ -13,7 +13,7 @@ config :merch_cat,
 # Configures the endpoint
 config :merch_cat, MerchCatWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "we-dont-use-this",
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: MerchCatWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: MerchCat.PubSub, adapter: Phoenix.PubSub.PG2]
 
@@ -33,3 +33,9 @@ import_config "#{Mix.env()}.exs"
 config :nostrum,
   token: System.get_env("DISCORD_BOT_TOKEN"),
   num_shards: :auto
+
+# Shopify app config
+config :shopify, [
+  client_id: System.get_env("SHOPIFY_API_KEY"),
+  client_secret: System.get_env("SHOPIFY_API_SECRET")
+]

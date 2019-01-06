@@ -1,6 +1,8 @@
 defmodule MerchCatWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :merch_cat
 
+  require Logger
+
   socket "/socket", MerchCatWeb.UserSocket,
     websocket: true,
     longpoll: false
@@ -27,7 +29,7 @@ defmodule MerchCatWeb.Endpoint do
   plug Plug.Logger
 
   plug Plug.Parsers,
-    parsers: [:urlencoded, :multipart, :json],
+    parsers: [:urlencoded, :multipart, :copiedbodyjson],
     pass: ["*/*"],
     json_decoder: Phoenix.json_library()
 

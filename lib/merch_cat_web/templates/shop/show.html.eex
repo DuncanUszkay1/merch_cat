@@ -1,0 +1,15 @@
+<h1>Show Shop</h1>
+
+<ul>
+
+  <li>
+    <strong>Shopify domain:</strong>
+    <%= @shop.shopify_domain %>
+  </li>
+
+  <li>
+    <strong>Shopify token:</strong>
+    <%= @shop.shopify_token %>
+  </li>
+
+</ul>
